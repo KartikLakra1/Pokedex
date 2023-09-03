@@ -1,0 +1,11 @@
+#search-pokemon{
+    width: 50%;
+    padding: 2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.1);
+    color: #000000;
+}
+
