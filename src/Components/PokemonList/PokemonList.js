@@ -5,14 +5,22 @@ import Pokemon from "../Pokemon/Pokemon";
 import './PokemonList.css';
 
 function PokemonList() {
-    const POKEDEX_URL = "https://pokeapi.co/api/v2/pokemon";
 
+    const DEFAULT = "https://pokeapi.co/api/v2/pokemon";
+
+
+    const [pokedexUrl , setpokedexUrl] = useState(DEFAULT);
     const [pokemonList , setpokemonList] = useState([]); 
+    const [nextUrl , setnextUrl] = useState(DEFAULT);
+    const [prevUrl , setprevUrl] = useState(DEFAULT);
 
     async function downloadPokemon(){
-        const res = await axios.get(POKEDEX_URL);
+        const res = await axios.get(pokedexUrl ? pokedexUrl : DEFAULT);
         
         const pokemonResults = res.data.results; //array of pokemon
+
+        setnextUrl(res.data.next);
+        setprevUrl(res.data.previous);
 
         const pokemonPromise = pokemonResults.map((ele) => axios.get(ele.url));
 
@@ -33,11 +41,15 @@ function PokemonList() {
 
     useEffect(() =>{
         downloadPokemon();
-    } , []);
+    } , [pokedexUrl]);
 
   return (
     <div className="pokemon-list-wrapper">
-        <h1>Pokemon List</h1>
+        <h1 id="pokemon-list">Pokemon List</h1>
+        <div className="page-controls">
+            <button onClick={() => setpokedexUrl(prevUrl)}>Prev</button>
+            <button onClick={() => setpokedexUrl(nextUrl)}>Next</button>
+        </div>
         <div className="pokemon-list">
         {pokemonList.map(pokemon => <Pokemon name={pokemon.name} key={pokemon.id} url={pokemon.image} />)};
         </div>
