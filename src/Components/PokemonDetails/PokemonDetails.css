@@ -1,0 +1,128 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.return{
+    margin-top: 1rem;
+}
+
+#pokedex-linking{
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-style: oblique;
+    color: rgb(175, 9, 9);
+    margin-top: 1.5rem;
+}
+
+.pokemon-details-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: auto;
+}
+
+.Primary-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+    border: 1px solid black;
+    padding: 3rem;
+    height: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 2rem;
+    background-color: rgb(246, 241, 241);
+}
+
+.card-left{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 30rem;
+}
+
+.pokemon-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+    font-size: 5rem;
+    letter-spacing: 3px;
+    background-color: rgb(234, 130, 112);
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px #fff;
+}
+
+.pokemon-attri{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 3rem;
+
+}
+
+.pokemon-attri p{
+    margin: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.pokemon-attri span{
+    background-color: #bfeee4;
+    padding: 0.2rem;
+    border-radius: 5px;
+    font-size: 1.7rem;
+}
+
+.type-pokemon{
+    display: flex;
+    align-items: center;
+    justify-content: ;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #c6e2ee;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.type-pokemon span{
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: 0.2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px black;
+    cursor: pointer;
+    background-color: #fff;
+    margin-left: 5px;
+}
+
+.card-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #f5e6e6;
+    height: 30rem;
+}
+
+.card-right img{
+    width: 400px;
+    height: auto;
+}

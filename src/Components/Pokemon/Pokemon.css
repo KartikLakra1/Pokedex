@@ -19,14 +19,24 @@
     cursor: pointer;
 }
 
-#pokemon-card h1{
+#Link-pokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#pokemon-name{
+    text-decoration: none;
+    color: black;
     font-size: medium;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
-
+    margin-bottom: 1.5rem;
 }
 
 #pokemon-card img{
     width: 200px;
     height: 200px;
 }
+
